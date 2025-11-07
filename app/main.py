@@ -16,7 +16,7 @@ def get_weather(city: str, request: Request):
     """
     Получить текущую температуру в городе
     
-    - **city**: Название города (например: Moscow, London, Paris)
+    - city- Название города 
     """
     try:
         weather_data = get_weather_data(city)
@@ -30,7 +30,6 @@ def get_weather(city: str, request: Request):
                 }
             )
 
-        return weather_data  # Иначе JSON
     except Exception as e:
         error_message = f"Ошибка получения данных: {str(e)}"
         if "text/html" in request.headers.get("accept", ""):
