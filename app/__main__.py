@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from .weather import get_weather_data
+from app.weather import get_weather_data
 
 app = FastAPI(title="Weather API", description="Получение текущей температуры в городе")
 

@@ -1,6 +1,6 @@
 import requests
 from typing import Dict, Any
-from .config import API_KEY , BASE_URL
+from app.config import API_KEY , BASE_URL
 
 
 def get_weather_data(city: str) -> Dict[str, Any]:
