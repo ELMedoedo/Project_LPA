@@ -4,7 +4,7 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from fastapi.templating import Jinja2Templates
-from typing import List
+from typing import List, Union
 from app.weather import get_weather_data
 
 app = FastAPI(title="Weather API", description="Получение текущей температуры в городе")
@@ -23,7 +23,7 @@ class WeatherResponse(BaseModel):
     humidity: int
     pressure: int
     wind_speed: float
-    visibility: str
+    visibility: Union[int, str]
 
 class ErrorResponse(BaseModel):
     detail: str
